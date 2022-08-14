@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  background: linear-gradient(to left, #e66465, #9198e5);
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.input {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+/* buttons */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+.btns {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid rgb(10, 138, 138);
+  opacity: 80%;
+}
+
+.btns:hover {
+  background: aqua;
+}
+
+.btn-start {
+  margin-right: 10px;
+  transform: translateX(0%);
+  transition: transform 1000ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.btn-random {
+  margin-left: 10px;
+  transform: translateX(0%);
+  transition: transform 1000ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.btn-left {
+  display: block;
+  transform: translateX(-500%);
+  transition: transform 1000ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.btn-right {
+  display: block;
+  transform: translateX(500%);
+  transition: transform 1000ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.btn-dissapear {
+  display: none;
+}
+
+.question-input {
+  height: 30px;
+  display: none;
+}
+
+.question-input > input {
+  width: 300px;
+  height: 30px;
+}
+
+/* players */
+
+.players {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+}
+
+.player-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.player1,
+.player2,
+.player3,
+.player4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 40%;
+}
+
+.player1 {
+  animation: pulsing 1s infinite ease-in;
+  transition: all 0.3s;
+  background: blue;
+}
+.player2 {
+  background: red;
+}
+.player3 {
+  background: purple;
+}
+.player4 {
+  background: green;
+}
+
+@keyframes pulsing {
+  0% {
+    box-shadow: 0 0 0 0 gold;
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(208, 226, 40, 0);
+  }
+} ;
